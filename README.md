@@ -70,7 +70,7 @@ WHERE
 
 The following SQL queries were developed to answer specific business questions:
 
-1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05**:
+1. ****:
 ```sql
 SELECT *
 FROM retail_sales
@@ -90,25 +90,26 @@ WHERE
     quantity >= 4
 ```
 
-3. **Write a SQL query to calculate the total sales (total_sale) for each category.**:
-```sql
-SELECT 
-    category,
-    SUM(total_sale) as net_sale,
-    COUNT(*) as total_orders
-FROM retail_sales
-GROUP BY 1
-```
-
-4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**:
+3. **write sql query to calculate the total sales (total_sale) for each category**:
 ```sql
 SELECT
-    ROUND(AVG(age), 2) as avg_age
+    category,
+    SUM(total_sales) as total_sales_by_cataegory
 FROM retail_sales
-WHERE category = 'Beauty'
+GROUP BY 1;
 ```
 
-5. **Write a SQL query to find all transactions where the total_sale is greater than 1000.**:
+4. **write a sql query to find the average age of customers who purchased items from the 'Beauty' category**:
+```sql
+SELECT 
+	ROUND(AVG(age),2) as average_age 
+FROM 
+    retail_sales 
+WHERE 
+    category = 'Beauty' ;
+```
+
+5. **Write a sql query to find all transactions where the total_sale is greater than 1000**:
 ```sql
 SELECT * FROM retail_sales
 WHERE total_sale > 1000
@@ -211,13 +212,6 @@ This project serves as a comprehensive introduction to SQL for data analysts, co
 3. **Run the Queries**: Use the SQL queries provided in the `analysis_queries.sql` file to perform your analysis.
 4. **Explore and Modify**: Feel free to modify the queries to explore different aspects of the dataset or answer additional business questions.
 
-## Author - Zero Analyst
-
-This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
-
-### Stay Updated and Join the Community
-
-For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media and join our community:
 
 - **YouTube**: [Subscribe to my channel for tutorials and insights](https://www.youtube.com/@zero_analyst)
 - **Instagram**: [Follow me for daily tips and updates](https://www.instagram.com/zero_analyst/)
@@ -225,3 +219,4 @@ For more content on SQL, data analysis, and other data-related topics, make sure
 - **Discord**: [Join our community to learn and grow together](https://discord.gg/36h5f2Z5PK)
 
 Thank you for your support, and I look forward to connecting with you!
+
